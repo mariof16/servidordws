@@ -1,0 +1,36 @@
+form{
+    width: 500px;
+    background-color:#CDEB8B;
+    border:2px black solid;
+    border-radius: 15px;
+}
+form>h1{
+    text-align: center;
+}
+form>div{
+   background-color:white;
+   width: 400px;
+   border:2px black solid;
+   border-radius: 15px;
+   margin: auto;
+   margin-bottom: 15px;
+}
+form>div:first-of-type>p{
+    display: inline-block;
+    margin-left: 35px;
+    padding: 0px;
+ }
+form>div>p{
+    padding: 15px;
+}
+input[name=opinion]{
+    margin-top:10px;
+    width: 360px;
+    height: 150px;
+}
+input[type=submit]{
+    margin-left:15px;
+    margin-bottom: 20px;
+    width:150px;
+    height: 30px;
+}

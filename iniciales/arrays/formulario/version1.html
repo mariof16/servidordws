@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="estilo.css">
+    </head>
+    <body>
+        <form method="GET" action="formulario.php">
+            <h1>Aporta tus ideas</h1>
+            <div>
+                <p>
+                    <label for="nombre">Nombre y Apellidos</label><br>
+                    <input type="text" name="nombre">
+                </p>
+                <p>
+                    <label for="fechanacimiento">Fecha Nacimiento</label><br>
+                    <input type="date" name="fechanacimiento">
+                </p>
+            </div>
+            <div>
+                <p>¿Compras estos productos en linea ?<br>
+                    <input type="checkbox" name="check[]" value="Comida">
+                    <label for="checkbox">Comida a domicilio</label><br>
+                    <input type="checkbox" name="check[]" value="Ropa">
+                    <label for="checkbox">Ropa</label><br>
+                    <input type="checkbox" name="check[]" value="Zapatillas">
+                    <label for="checkbox">Zapatillas</label><br>
+                    <input type="checkbox" name="check[]" value="Amazon">
+                    <label for="checkbox">Productos de amazon</label><br>
+                    <input type="checkbox" name="check[]" value="Electronicos">
+                    <label for="checkbox">Productos electrónicos</label>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <label for="pedirenlinea">¿Cada cuanto pides en linea?</label><br>
+                    <input type="radio" name="pedirenlinea" value="1">1 Día<br>
+                    <input type="radio" name="pedirenlinea" value="2">2 Días<br>
+                    <input type="radio" name="pedirenlinea" value="4">4 Días<br>
+                    <input type="radio" name="pedirenlinea" value="7">7 Días<br>
+                    <input type="radio" name="pedirenlinea" value="14">14 Días<br>
+                    <input type="radio" name="pedirenlinea" value="30">30 Días<br>
+                    <input type="radio" name="pedirenlinea" value="no">No pido en linea<br>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <label for="opinion">¿Qué opinas sobre el efecto de pedir en linea en el medio ambiente?</label><br>
+                    <input type="text" name="opinion"><br>
+                </p>
+                <input type="submit" name="enviar">
+            </div>
+            
+        </form>
+    </body>
+</html>
