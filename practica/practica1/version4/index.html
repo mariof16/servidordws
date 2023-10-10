@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+        #caja1{
+            width: 250px;
+            padding: 25px;
+            margin:auto;
+           
+            border:1px solid black;
+        }
+        #caja1>div:not(:first-child){
+            border:1px solid black;
+            width: 248px;
+            height: 150px;
+            margin-top: 49px;
+        }
+        #mesaprof{
+            width: 150px;
+            height: 100px;
+            top:620px; 
+            margin-top: 50px;
+            border:1px solid black;
+        } #mesa1{
+            left: 150px;
+            bottom: 100px;
+        }
+        #mesa2{
+            right: 150px;
+            bottom: 100px;
+        }
+        #mesa3{
+            left: 150px;
+            bottom: 100px;
+        }
+    </style>
+</head>
+    <body>
+        <div id="caja1">
+            <div id="mesaprof">
+                Profesor
+            </div>
+            <div id="mesa1">
+                Mesa1
+            </div>
+            <div id="mesa2">
+                Mesa2
+            </div>
+            <div id="mesa3">
+                Mesa3
+            </div>
+        </div> 
+    </body>
+</html>
