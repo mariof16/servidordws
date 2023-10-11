@@ -10,7 +10,10 @@
         //Conecto con la base de datos utilizando los datos de conexión y creando un objeto mysqli
         $mysqli=new mysqli($servidor,$usuario,$contra,$bbdd);
         //Consulta que voy a ejecutar
-        $consulta="Select nombre,firma from jesuita where nombre='".$nombre."'";
+        //$consulta="Select nombre,firma from jesuita where nombre='".$nombre."'";
+        //$consulta="Select Concat(nombre,' ',firma) from jesuita where nombre='".$nombre."'";
+        $consulta="Select Concat(nombre,' ',firma) as nombreFirma from jesuita where nombre='".$nombre."'";
+        echo $consulta."<br>";
 
         //Resultado es el conjunto de filas y columnas que nos devuelve la consulta sobre $conexión
         $resultado=$mysqli->query($consulta);
@@ -21,20 +24,20 @@
         if($resultado->num_rows==0){
             echo "<p>No hay datos</p>";
         }else{
-            echo "<table>
+             $fila = $resultado->fetch_assoc();
+            //Visualizo nombre y firma del array devuelto fila
+            /*echo "<table>
                 <tr>
                     <th>Nombre</th>
                     <th>Firma</th>
-                </tr>
-            ";
-            $fila = $resultado->fetch_array();
-            //Visualizo nombre y firma del array devuelto fila
-            echo 
-            "<tr>
-                <td>".$fila["nombre"]."</td>
-                <td>".$fila["firma"]."</td>
-            </tr>";
-            echo "</table>";
+                </tr> 
+                <tr>
+                    <td>".$fila["nombre"]."</td>
+                    <td>".$fila["firma"]."</td>
+                </tr>";
+            "</table>";*/
+            foreach($fila as $valor)
+                echo " Valor: ".$valor."<br>";
         }
         $mysqli->close();
     }

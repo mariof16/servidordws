@@ -10,7 +10,7 @@
         //Conecto con la base de datos utilizando los datos de conexión
         $conexion=mysqli_connect($servidor,$usuario,$contra,$bbdd);
         //Consulta que voy a ejecutar
-        $consulta="Select * from jesuita where nombre='".$nombre."'";
+        $consulta="Select nombre,firma from jesuita where nombre='".$nombre."'";
 
         //Resultado es el conjunto de filas y columnas que nos devuelve la consulta "Select * from jesuita" sobre $conexión
         $resultado=mysqli_query($conexion,$consulta);
